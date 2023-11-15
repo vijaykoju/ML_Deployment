@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Diabetes Prediction</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies (e.g. 2)" required="required" /><br>
+    	<input type="text" name="Glucose" placeholder="Glucose (e.g. 115)" required="required" /><br>
+        <input type="text" name="BloodPressure" placeholder="BloodPressure (e.g. 83)" required="required" /><br>
+        <input type="text" name="Insulin" placeholder="Insulin (e.g. 53)" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI (e.g. 32.1)" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age (e.g. 43)" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+
+</body>
+</html>
